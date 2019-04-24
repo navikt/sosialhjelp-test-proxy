@@ -1,6 +1,0 @@
-language: minimal
-deploy:
-  provider: heroku
-  api_key: "$HEROKU_API_KEY"
-  app: test-proxy-75693
-  on: master
