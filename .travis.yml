@@ -3,6 +3,13 @@ deploy:
   api_key:
     secure: "$HEROKU_AUTH_TOKEN"
   app: test-proxy-75693
+
+env:
+  global:
+  - GITHUB_APP_ID=29515
+
 before_install:
-- openssl aes-256-cbc -K $encrypted_ec8011f25c5d_key -iv $encrypted_ec8011f25c5d_iv
-  -in travis/digisos_deploy.key.enc -out travis/digisos_deploy.key -d
+- openssl aes-256-cbc -K $encrypted_ec8011f25c5d_key -iv $encrypted_ec8011f25c5d_iv -in travis/digisos_deploy.key.enc -out travis/digisos_deploy.key -d
+- git clone https://github.com/navikt/github-apps-support.git
+- export PATH=`pwd`/github-apps-support/bin:$PATH
+- export INSTALLATION_TOKEN=$(generate-installation-token.sh `generate-jwt.sh ./travis/my-private-key.pem $GITHUB_APP_ID`)
