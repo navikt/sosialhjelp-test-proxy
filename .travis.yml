@@ -4,3 +4,4 @@ deploy:
   api_key:
     secret: "$HEROKU_API_KEY"
   app: test-proxy-75693
+  on: master
