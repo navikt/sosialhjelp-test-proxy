@@ -1,8 +1,4 @@
-deploy:
-  provider: heroku
-  api_key:
-    secure: "$HEROKU_AUTH_TOKEN"
-  app: test-proxy-75693
+language: minimal
 env:
   global:
   - GITHUB_APP_ID=29515
