@@ -31,7 +31,6 @@ jobs:
               --owner=navikt \
               --repository="${REPOSITORY_NAME}" \
               --var version=${TAG} \
-              --vars="nais/dev/${MILJO}.json" \
               --wait
         env:
           MILJO: ${{ github.event.client_payload.MILJO }}
