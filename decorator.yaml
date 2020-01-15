@@ -1,0 +1,23 @@
+auth: # any value in the following attributes will activate support for authentication and authorization (additional configuration properties will be required)
+  enforce: false # if pus-decorator should automatically login users before serving the application. default: true
+
+proxy: # default: /frontendlogger => http://frontendlogger.default is added, but may be overwritten.
+
+  - contextPath: /sosialhjelp/innsyn
+    baseUrl: https://sosialhjelp-innsyn.labs.nais.io/
+
+  - contextPath: /sosialhjelp/innsyn-api
+    baseUrl: https://sosialhjelp-innsyn-api.labs.nais.io/
+
+  - contextPath: /sosialhjelp/soknad
+    baseUrl: https://sosialhjelp-soknad.labs.nais.io/
+
+  - contextPath: /sosialhjelp/soknad-api
+    baseUrl: https://sosialhjelp-soknad-api.labs.nais.io/
+
+  - contextPath: /sosialhjelp/fagsystem-mock
+    baseUrl: https://sosialhjelp-fagsystem-mock.labs.nais.io/
+
+redirect:
+  - from: /soknadsosialhjelp
+    to: https://www.digisos-test.com/sosialhjelp/soknad/mock-login
