@@ -15,6 +15,7 @@ spec:
         - host: "nav.psplugin.com"
       rules: []
   ingresses:
+    - "https://sosialhjelp-test-proxy.labs.nais.io/"
   prometheus:
     enabled: false
     path: /prometheus
@@ -37,3 +38,5 @@ spec:
     cpuThresholdPercentage: 50
   webproxy: false
   env:
+    - name: DISABLE_PROXY
+      value: false
