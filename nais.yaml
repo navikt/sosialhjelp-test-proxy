@@ -39,4 +39,4 @@ spec:
   webproxy: false
   env:
     - name: DISABLE_PROXY
-      value: "false"
+      value: "true"
