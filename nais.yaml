@@ -40,3 +40,5 @@ spec:
   env:
     - name: DISABLE_PROXY
       value: "true"
+    - name: PORT
+      value: "8080"
