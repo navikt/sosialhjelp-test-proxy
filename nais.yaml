@@ -13,6 +13,11 @@ spec:
       external:
         - host: "appres.nav.no"
         - host: "nav.psplugin.com"
+        - host: "sosialhjelp-veiviser.labs.nais.io"
+        - host: "sosialhjelp-soknad.labs.nais.io"
+        - host: "sosialhjelp-soknad-api.labs.nais.io"
+        - host: "sosialhjelp-innsyn.labs.nais.io"
+        - host: "sosialhjelp-innsyn-api.labs.nais.io"
       rules: []
   ingresses:
     - "https://sosialhjelp-test-proxy.labs.nais.io/sosialhjelp/"
