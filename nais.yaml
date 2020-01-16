@@ -15,7 +15,7 @@ spec:
         - host: "nav.psplugin.com"
       rules: []
   ingresses:
-    - "https://sosialhjelp-test-proxy.labs.nais.io/"
+    - "https://sosialhjelp-test-proxy.labs.nais.io/sosialhjelp/"
   prometheus:
     enabled: false
     path: /prometheus
