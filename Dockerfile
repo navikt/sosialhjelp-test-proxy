@@ -1,4 +1,4 @@
-FROM node:12.8.1 as node-builder
+#FROM nginx
 
 #FROM nginx:1.15
 #COPY default.conf /etc/nginx/conf.d/default.conf
@@ -8,3 +8,4 @@ FROM navikt/pus-decorator
 ENV APPLICATION_NAME=sosialhjelp-test-proxy
 ENV CONTEXT_PATH=sosialhjelp
 COPY decorator.yaml /decorator.yaml
+COPY index.html /app/index.html
