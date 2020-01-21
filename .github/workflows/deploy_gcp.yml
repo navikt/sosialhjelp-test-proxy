@@ -16,12 +16,6 @@ jobs:
           echo "***   Deploying $TAG to $MILJO   ***"
           git checkout ${TAG}
           REPOSITORY_NAME=$(echo $GITHUB_REPOSITORY | sed s/navikt\\///g)
-          echo "DEBUG... ls -l /"
-          ls -l /
-          echo "...DEBUG"
-          echo "DEBUG... ls -l /app/"
-          ls -l /app/
-          echo "...DEBUG"
           /app/deploy \
               --actions \
               --cluster="${MILJO}" \
