@@ -1,0 +1,48 @@
+apiVersion: "nais.io/v1alpha1"
+kind: "Application"
+metadata:
+  name: digisos
+  namespace: teamdigisos
+  labels:
+    team: teamdigisos
+spec:
+  image: docker.pkg.github.com/navikt/sosialhjelp-test-proxy/sosialhjelp-test-proxy:{{version}}
+  port: 8080
+  accessPolicy:
+    outbound:
+      external:
+        - host: "appres.nav.no"
+        - host: "nav.psplugin.com"
+        - host: "sosialhjelp-veiviser.labs.nais.io"
+        - host: "sosialhjelp-soknad.labs.nais.io"
+        - host: "sosialhjelp-soknad-api.labs.nais.io"
+        - host: "sosialhjelp-innsyn.labs.nais.io"
+        - host: "sosialhjelp-innsyn-api.labs.nais.io"
+        - host: "sosialhjelp-fagsystem-mock.labs.nais.io"
+      rules: []
+  ingresses:
+    - "https://digisos.labs.nais.io/sosialhjelp/"
+  prometheus:
+    enabled: false
+    path: /prometheus
+  liveness:
+    path: /internal/isAlive
+    initialDelay: 20
+  readiness:
+    path: /internal/isAlive
+    initialDelay: 20
+  resources:
+    limits:
+      cpu: 3000m
+      memory: 1024Mi
+    requests:
+      cpu: 400m
+      memory: 512Mi
+  replicas:
+    min: 2
+    max: 2
+    cpuThresholdPercentage: 50
+  webproxy: true
+  env:
+    - name: PORT
+      value: "8080"
