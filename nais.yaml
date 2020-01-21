@@ -18,6 +18,7 @@ spec:
         - host: "sosialhjelp-soknad-api.labs.nais.io"
         - host: "sosialhjelp-innsyn.labs.nais.io"
         - host: "sosialhjelp-innsyn-api.labs.nais.io"
+        - host: "sosialhjelp-fagsystem-mock.labs.nais.io"
       rules: []
   ingresses:
     - "https://digisos.labs.nais.io/sosialhjelp/"
