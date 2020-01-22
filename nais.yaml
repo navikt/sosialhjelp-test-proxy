@@ -21,7 +21,7 @@ spec:
         - host: "sosialhjelp-fagsystem-mock.labs.nais.io"
       rules: []
   ingresses:
-    - "https://digisos.labs.nais.io/sosialhjelp/"
+    - "https://digisos.labs.nais.io/sosialhjelp"
   prometheus:
     enabled: false
     path: /prometheus
