@@ -18,6 +18,9 @@ spec:
         - host: "sosialhjelp-soknad-api.labs.nais.io"
         - host: "sosialhjelp-innsyn.labs.nais.io"
         - host: "sosialhjelp-innsyn-api.labs.nais.io"
+        - host: "sosialhjelp-modia.labs.nais.io"
+        - host: "sosialhjelp-modia-api.labs.nais.io"
+        - host: "sosialhjelp-mock-alt-api.labs.nais.io"
         - host: "sosialhjelp-fagsystem-mock.labs.nais.io"
       rules: []
   ingresses:
