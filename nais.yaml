@@ -13,21 +13,16 @@ spec:
       external:
         - host: "appres.nav.no"
         - host: "nav.psplugin.com"
-      rules:
-        - application: veiviser
-        - application: soknad
-        - application: soknad-api
-        - application: innsyn
-        - application: innsyn-api
-        - application: modia
-        - application: modia-api
-        - application: mock-alt-api
-        - application: fagsystem-mock
-    inbound:
-      rules:
-        - application: soknad-api
-        - application: innsyn-api
-        - application: modia-api
+        - host: "sosialhjelp-veiviser.labs.nais.io"
+        - host: "sosialhjelp-soknad.labs.nais.io"
+        - host: "sosialhjelp-soknad-api.labs.nais.io"
+        - host: "sosialhjelp-innsyn.labs.nais.io"
+        - host: "sosialhjelp-innsyn-api.labs.nais.io"
+        - host: "sosialhjelp-modia.labs.nais.io"
+        - host: "sosialhjelp-modia-api.labs.nais.io"
+        - host: "sosialhjelp-mock-alt-api.labs.nais.io"
+        - host: "sosialhjelp-fagsystem-mock.labs.nais.io"
+      rules: []
   ingresses:
     - "https://digisos.labs.nais.io/sosialhjelp"
   prometheus:
@@ -47,8 +42,8 @@ spec:
       cpu: 400m
       memory: 512Mi
   replicas:
-    min: 1
-    max: 1
+    min: 2
+    max: 2
     cpuThresholdPercentage: 50
   webproxy: true
   env:
