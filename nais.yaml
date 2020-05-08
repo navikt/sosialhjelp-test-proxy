@@ -9,10 +9,12 @@ spec:
   image: docker.pkg.github.com/navikt/sosialhjelp-test-proxy/sosialhjelp-test-proxy:{{version}}
   port: 8080
   accessPolicy:
+    inbound:
+      rules:
+        - application: soknad-api
+        - application: innsyn-api
+        - application: modia-api
     outbound:
-      external:
-        - host: "appres.nav.no"
-        - host: "nav.psplugin.com"
       rules:
         - application: veiviser
         - application: soknad
@@ -23,11 +25,9 @@ spec:
         - application: modia-api
         - application: mock-alt-api
         - application: fagsystem-mock
-    inbound:
-      rules:
-        - application: soknad-api
-        - application: innsyn-api
-        - application: modia-api
+      external:
+        - host: "appres.nav.no"
+        - host: "nav.psplugin.com"
   ingresses:
     - "https://digisos.labs.nais.io/sosialhjelp"
   prometheus:
