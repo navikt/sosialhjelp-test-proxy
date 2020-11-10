@@ -13,15 +13,15 @@ spec:
       external:
         - host: "appres.nav.no"
         - host: "nav.psplugin.com"
-        - host: "sosialhjelp-veiviser{{DOMENE}}"
-        - host: "sosialhjelp-soknad${DOMENE}"
-        - host: "sosialhjelp-soknad-api${DOMENE}"
-        - host: "sosialhjelp-innsyn${DOMENE}"
-        - host: "sosialhjelp-innsyn-api${DOMENE}"
-        - host: "sosialhjelp-modia${DOMENE}"
-        - host: "sosialhjelp-modia-api${DOMENE}"
-        - host: "sosialhjelp-mock-alt-api${DOMENE}"
-        - host: "sosialhjelp-fagsystem-mock${DOMENE}"
+        - host: "sosialhjelp-veiviser{{domene}}"
+        - host: "sosialhjelp-soknad{{domene}}"
+        - host: "sosialhjelp-soknad-api{{domene}}"
+        - host: "sosialhjelp-innsyn{{domene}}"
+        - host: "sosialhjelp-innsyn-api{{domene}}"
+        - host: "sosialhjelp-modia{{domene}}"
+        - host: "sosialhjelp-modia-api{{domene}}"
+        - host: "sosialhjelp-mock-alt-api{{domene}}"
+        - host: "sosialhjelp-fagsystem-mock{{domene}}"
     inbound:
       rules:
         - application: sosialhjelp-soknad-api
