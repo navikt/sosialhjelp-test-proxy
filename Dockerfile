@@ -1,4 +1,4 @@
 FROM nginx:1.15
-COPY default.conf /etc/nginx/conf.d/default.conf
+CMD envsubst default.conf /etc/nginx/conf.d/default.conf
 COPY static /static
-CMD sed -i -e 's/$PORT/'"$PORT"'/g' /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'
+CMD envsubst '${PORT} ${DOMENE}' < default.conf > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'
