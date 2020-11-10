@@ -1,8 +1,8 @@
 apiVersion: "nais.io/v1alpha1"
 kind: "Application"
 metadata:
-  name: digisos
-  namespace: teamdigisos
+  name: {{applicationName}}
+  namespace: {{namespace}}
   labels:
     team: teamdigisos
 spec:
@@ -13,18 +13,25 @@ spec:
       external:
         - host: "appres.nav.no"
         - host: "nav.psplugin.com"
-        - host: "sosialhjelp-veiviser.labs.nais.io"
-        - host: "sosialhjelp-soknad.labs.nais.io"
-        - host: "sosialhjelp-soknad-api.labs.nais.io"
-        - host: "sosialhjelp-innsyn.labs.nais.io"
-        - host: "sosialhjelp-innsyn-api.labs.nais.io"
-        - host: "sosialhjelp-modia.labs.nais.io"
-        - host: "sosialhjelp-modia-api.labs.nais.io"
-        - host: "sosialhjelp-mock-alt-api.labs.nais.io"
-        - host: "sosialhjelp-fagsystem-mock.labs.nais.io"
-      rules: []
+      rules:
+        - application: sosialhjelp-veiviser
+        - application: sosialhjelp-soknad
+        - application: sosialhjelp-soknad-api
+        - application: sosialhjelp-innsyn
+        - application: sosialhjelp-innsyn-api
+        - application: sosialhjelp-modia
+        - application: sosialhjelp-modia-api
+        - application: sosialhjelp-mock-alt-api
+        - application: sosialhjelp-fagsystem-mock
+    inbound:
+      rules:
+        - application: sosialhjelp-soknad-api
+        - application: sosialhjelp-innsyn-api
+        - application: sosialhjelp-modia-api
   ingresses:
-    - "https://digisos.labs.nais.io/sosialhjelp"
+{{#each ingresses}}
+    - "{{this}}"
+{{/each}}
   prometheus:
     enabled: false
     path: /prometheus
@@ -36,11 +43,11 @@ spec:
     initialDelay: 20
   resources:
     limits:
-      cpu: 3000m
-      memory: 1024Mi
+      cpu: 200m
+      memory: 256Mi
     requests:
-      cpu: 400m
-      memory: 512Mi
+      cpu: 100m
+      memory: 128Mi
   replicas:
     min: 1
     max: 1
@@ -49,3 +56,5 @@ spec:
   env:
     - name: PORT
       value: "8080"
+    - name: DOMENE
+      value: {{domene}}
