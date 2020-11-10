@@ -1,0 +1,8 @@
+{
+  "applicationName": "digisos",
+  "namespace": "teamdigisos",
+  "domene": "labs.nais.io",
+  "ingresses": [
+    "https://digisos.labs.nais.io/sosialhjelp"
+  ]
+}
