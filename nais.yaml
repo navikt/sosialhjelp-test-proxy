@@ -6,7 +6,7 @@ metadata:
   labels:
     team: teamdigisos
 spec:
-  image: docker.pkg.github.com/navikt/sosialhjelp-test-proxy/sosialhjelp-test-proxy:{{version}}
+  image: {{image}}
   port: 8080
   accessPolicy:
     outbound:
