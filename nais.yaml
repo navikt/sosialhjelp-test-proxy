@@ -20,6 +20,7 @@ spec:
         - host: "sosialhjelp-innsyn-api{{domene}}"
         - host: "sosialhjelp-modia{{domene}}"
         - host: "sosialhjelp-modia-api{{domene}}"
+        - host: "sosialhjelp-mock-alt{{domene}}"
         - host: "sosialhjelp-mock-alt-api{{domene}}"
         - host: "sosialhjelp-fagsystem-mock{{domene}}"
     inbound:
