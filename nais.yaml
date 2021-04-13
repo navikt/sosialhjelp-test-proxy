@@ -22,7 +22,8 @@ spec:
         - host: "sosialhjelp-modia-api{{domene}}"
         - host: "sosialhjelp-mock-alt{{domene}}"
         - host: "sosialhjelp-mock-alt-api{{domene}}"
-        - host: "sosialhjelp-dialog{{domene}}"
+        - host: "sosialhjelp-dialog-bruker{{domene}}"
+        - host: "sosialhjelp-dialog-veileder{{domene}}"
         - host: "sosialhjelp-dialog-api{{domene}}"
         - host: "sosialhjelp-fagsystem-mock{{domene}}"
     inbound:
