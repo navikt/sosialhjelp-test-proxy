@@ -10,6 +10,16 @@ spec:
   port: 8080
   accessPolicy:
     outbound:
+      rules:
+        - application: sosialhjelp-soknad
+        - application: sosialhjelp-soknad-api
+        - application: sosialhjelp-innsyn
+        - application: sosialhjelp-innsyn-api
+        - application: sosialhjelp-modia
+        - application: sosialhjelp-modia-api
+        - application: sosialhjelp-dialog-bruker
+        - application: sosialhjelp-dialog-veileder
+        - application: sosialhjelp-dialog-api
       external:
         - host: "appres.nav.no"
         - host: "nav.psplugin.com"
