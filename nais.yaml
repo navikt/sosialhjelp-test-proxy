@@ -32,6 +32,7 @@ spec:
         - application: sosialhjelp-innsyn-api
         - application: sosialhjelp-modia-api
         - application: sosialhjelp-dialog-api
+        - application: sosialhjelp-mock-alt-api
   ingresses:
 {{#each ingresses}}
     - "{{this}}"
