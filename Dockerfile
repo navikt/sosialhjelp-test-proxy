@@ -4,4 +4,4 @@ RUN apt-get update \
   && rm -rf /var/lib/apt/lists/*
 COPY default.conf /default.conf
 COPY static /static
-CMD envsubst '${PORT} ${DOMENE}' < /default.conf > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'
+CMD envsubst '${PORT} ${DOMENE} ${DOMENE_PA_UTSIDEN}' < /default.conf > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'

@@ -2,6 +2,7 @@
   "applicationName": "digisos",
   "namespace": "teamdigisos",
   "domene": ".labs.nais.io",
+  "domene_pa_utsiden": ".labs.nais.io",
   "ingresses": [
     "https://digisos.labs.nais.io/sosialhjelp"
   ]
