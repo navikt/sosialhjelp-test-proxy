@@ -6,7 +6,7 @@ metadata:
   labels:
     team: teamdigisos
   annotations:
-    nais.io/run-as-group: "0"
+    nais.io/run-as-user: "0"
     nais.io/read-only-file-system: "false"
 spec:
   image: {{image}}
