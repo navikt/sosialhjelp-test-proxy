@@ -6,5 +6,5 @@ COPY default.conf /default.conf
 COPY static /static
 RUN chmod 660 /etc/nginx/conf.d/default.conf
 RUN chmod 770 /var/cache/nginx
-RUN chmod 660 /var/run/nginx.pid
+RUN chmod 770 /var/run/
 CMD envsubst '${PORT} ${DOMENE}' < /default.conf > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'
