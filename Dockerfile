@@ -5,5 +5,5 @@ RUN apt-get update \
 COPY default.conf /default.conf
 COPY static /static
 RUN chmod 660 /etc/nginx/conf.d/default.conf
-RUN chmod 770 /var/cache/nginx/client_temp
+RUN chmod 770 /var/cache/nginx
 CMD envsubst '${PORT} ${DOMENE}' < /default.conf > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'
