@@ -8,7 +8,7 @@ metadata:
   annotations:
     nais.io/run-as-group: "0"
     nais.io/read-only-file-system: "false"
-    nginx.ingress.kubernetes.io/proxy-body-size: "40M"
+    nginx.ingress.kubernetes.io/proxy-body-size: "150M"
 spec:
   image: {{image}}
   port: 8080
