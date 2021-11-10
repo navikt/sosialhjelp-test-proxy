@@ -1,4 +1,4 @@
-FROM nginxinc/nginx-unprivileged:1.20
+FROM nginxinc/nginx-unprivileged:1.21.3
 COPY default.conf /default.conf
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY static /static
