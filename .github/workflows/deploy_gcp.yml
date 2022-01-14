@@ -18,6 +18,7 @@ jobs:
     name: Deploy to GCP
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - name: Create artifact version
         id: artifact-version
         uses: navikt/sosialhjelp-ci/actions/create-artifact-version@master
