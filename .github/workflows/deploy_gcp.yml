@@ -2,6 +2,16 @@ name: Deploy GCP
 on:
   repository_dispatch:
     types: [deploy_dev_gcp]
+  workflow_dispatch:
+    inputs:
+      config-file-name:
+        description: 'Config-fil (uten .json) som skal deployes'
+        required: true
+        default: 'dev-gcp'
+      cluster:
+        description: 'Cluster å deploye til (labs-gcp eller dev-gcp)'
+        required: true
+        default: 'dev-gcp'
 
 jobs:
   deploy:
@@ -14,6 +24,18 @@ jobs:
           PROJECT_NAME=$(echo ${{ github.repository }} | cut -d/ -f2)
           echo "IMAGE=docker.pkg.github.com/${{ github.repository }}/$PROJECT_NAME:${{ github.event.client_payload.TAG }}" >> $GITHUB_ENV
 
+      - name: Sett cluster og config fra repository_dispatch
+        if: github.event_name == 'repository_dispatch'
+        run: |
+          echo "CLUSTER_NAME=${{ github.event.client_payload.cluster }}" >> $GITHUB_ENV
+          echo "CONFIG_FILE=${{ github.event.client_payload.config-file-name }}" >> $GITHUB_ENV
+      - name: Sett cluster og config fra workflow_dispatch
+        if: github.event_name == 'workflow_dispatch'
+        run: |
+          echo "CLUSTER_NAME=${{ github.event.inputs.cluster }}" >> $GITHUB_ENV
+          echo "CONFIG_FILE=${{ github.event.inputs.config-file-name }}" >> $GITHUB_ENV
+
+
       - uses: actions/checkout@v2
         with:
           ref: ${{ github.event.client_payload.TAG }}
@@ -23,8 +45,8 @@ jobs:
         env:
           APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
           RESOURCE: nais.yaml
-          CLUSTER: ${{ github.event.client_payload.MILJO }}
-          VARS: nais/${{ github.event.client_payload.MILJO }}.json
+          CLUSTER: ${{ env.CLUSTER_NAME }}
+          VARS: nais/${{ env.CONFIG_FILE }}.json
           REF: ${{ github.event.client_payload.TAG }}
           PRINT_PAYLOAD: true
           IMAGE: ${{ env.IMAGE }}
