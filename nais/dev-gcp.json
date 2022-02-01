@@ -4,6 +4,6 @@
   "domene_pa_innsiden": "-gcp.dev.nav.no",
   "domene_pa_utsiden": ".ekstern.dev.nav.no",
   "ingresses": [
-    "https://digisos-gcp.dev.nav.no/sosialhjelp",
+    "https://digisos-gcp.dev.nav.no"
   ]
 }
