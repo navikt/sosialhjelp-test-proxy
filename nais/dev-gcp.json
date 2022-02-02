@@ -1,8 +1,9 @@
 {
   "applicationName": "digisos",
   "namespace": "teamdigisos",
-  "domene": "-gcp.dev.nav.no",
+  "domene_pa_innsiden": "-gcp.dev.nav.no",
+  "domene_pa_utsiden": "-gcp.dev.nav.no",
   "ingresses": [
-    "https://digisos-gcp.dev.nav.no/sosialhjelp"
+    "https://digisos-gcp.dev.nav.no"
   ]
 }

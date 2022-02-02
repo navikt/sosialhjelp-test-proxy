@@ -1,0 +1,9 @@
+{
+  "applicationName": "sosialhjelp-proxy-mock",
+  "namespace": "teamdigisos",
+  "domene_pa_innsiden": "-mock.dev.nav.no",
+  "domene_pa_utsiden": ".ekstern.dev.nav.no",
+  "ingresses": [
+    "https://digisos.ekstern.dev.nav.no"
+  ]
+}
