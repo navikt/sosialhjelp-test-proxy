@@ -9,7 +9,8 @@ on:
         type: choice
         options:
           - 'dev-gcp'
-          - 'dev-gcp-mock'
+          - 'mock'
+          - 'dev'
           - 'labs-gcp'
       cluster:
         description: 'Cluster å deploye til'
