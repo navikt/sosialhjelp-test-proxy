@@ -21,7 +21,9 @@ spec:
         - host: "sosialhjelp-soknad{{domene}}"
         - host: "sosialhjelp-soknad-api{{domene}}"
         - host: "sosialhjelp-innsyn{{domene}}"
+        - host: "sosialhjelp-innsyn-dev"
         - host: "sosialhjelp-innsyn-api{{domene}}"
+        - host: "sosialhjelp-innsyn-api-dev"
         - host: "sosialhjelp-modia{{domene}}"
         - host: "sosialhjelp-modia-api{{domene}}"
         - host: "sosialhjelp-mock-alt{{domene}}"
@@ -34,6 +36,7 @@ spec:
       rules:
         - application: sosialhjelp-soknad-api
         - application: sosialhjelp-innsyn-api
+        - application: sosialhjelp-innsyn-api-dev
         - application: sosialhjelp-modia-api
         - application: sosialhjelp-dialog-api
   ingresses:
