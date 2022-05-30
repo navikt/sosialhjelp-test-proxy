@@ -1,7 +1,7 @@
 {
   "applicationName": "digisos",
   "namespace": "teamdigisos",
-  "domene_pa_innsiden": ".labs.nais.io",
+  "domene_pa_innsiden": "-mock.dev.nav.no",
   "domene_pa_utsiden": ".labs.nais.io",
   "ingresses": [
     "https://digisos.labs.nais.io/sosialhjelp"
