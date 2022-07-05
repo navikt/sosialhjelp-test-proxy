@@ -1,6 +1,7 @@
 {
   "applicationName": "digisos",
   "namespace": "teamdigisos",
+  "appNamePostfix": "",
   "domene_pa_innsiden": ".labs.nais.io",
   "domene_pa_utsiden": ".labs.nais.io",
   "ingresses": [

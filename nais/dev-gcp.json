@@ -1,9 +1,0 @@
-{
-  "applicationName": "digisos",
-  "namespace": "teamdigisos",
-  "domene_pa_innsiden": "-gcp.dev.nav.no",
-  "domene_pa_utsiden": "-gcp.dev.nav.no",
-  "ingresses": [
-    "https://digisos-gcp.dev.nav.no"
-  ]
-}
