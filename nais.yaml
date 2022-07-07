@@ -17,25 +17,26 @@ spec:
       external:
         - host: "appres.nav.no"
         - host: "nav.psplugin.com"
-        - host: "sosialhjelp-veiviser{{domene}}"
-        - host: "sosialhjelp-soknad{{domene}}"
-        - host: "sosialhjelp-soknad-api{{domene}}"
-        - host: "sosialhjelp-innsyn{{domene}}"
-        - host: "sosialhjelp-innsyn-api{{domene}}"
-        - host: "sosialhjelp-modia{{domene}}"
-        - host: "sosialhjelp-modia-api{{domene}}"
-        - host: "sosialhjelp-mock-alt{{domene}}"
-        - host: "sosialhjelp-mock-alt-api{{domene}}"
-        - host: "sosialhjelp-dialog-bruker{{domene}}"
-        - host: "sosialhjelp-dialog-veileder{{domene}}"
-        - host: "sosialhjelp-dialog-api{{domene}}"
-        - host: "sosialhjelp-fagsystem-mock{{domene}}"
+      rules:
+        - application: "sosialhjelp-veiviser{{appNamePostfix}}"
+        - application: "sosialhjelp-soknad{{appNamePostfix}}"
+        - application: "sosialhjelp-soknad-api{{appNamePostfix}}"
+        - application: "sosialhjelp-innsyn{{appNamePostfix}}"
+        - application: "sosialhjelp-innsyn-api{{appNamePostfix}}"
+        - application: "sosialhjelp-modia{{appNamePostfix}}"
+        - application: "sosialhjelp-modia-api{{appNamePostfix}}"
+        - application: "sosialhjelp-mock-alt{{appNamePostfix}}"
+        - application: "sosialhjelp-mock-alt-api{{appNamePostfix}}"
+        - application: "sosialhjelp-dialog-bruker{{appNamePostfix}}"
+        - application: "sosialhjelp-dialog-veileder{{appNamePostfix}}"
+        - application: "sosialhjelp-dialog-api{{appNamePostfix}}"
+        - application: "sosialhjelp-fagsystem-mock{{appNamePostfix}}"
     inbound:
       rules:
-        - application: sosialhjelp-soknad-api
-        - application: sosialhjelp-innsyn-api
-        - application: sosialhjelp-modia-api
-        - application: sosialhjelp-dialog-api
+        - application: "sosialhjelp-soknad-api{{appNamePostfix}}"
+        - application: "sosialhjelp-innsyn-api{{appNamePostfix}}"
+        - application: "sosialhjelp-modia-api{{appNamePostfix}}"
+        - application: "sosialhjelp-dialog-api{{appNamePostfix}}"
   ingresses:
 {{#each ingresses}}
     - "{{this}}"
