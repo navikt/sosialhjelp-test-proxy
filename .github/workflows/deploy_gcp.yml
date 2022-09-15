@@ -10,15 +10,6 @@ on:
         options:
           - 'mock'
           - 'dev'
-          - 'labs-gcp'
-      cluster:
-        description: 'Cluster å deploye til'
-        required: true
-        default: 'dev-gcp'
-        type: choice
-        options:
-          - 'dev-gcp'
-          - 'labs-gcp'
 
 jobs:
   deploy:
@@ -33,14 +24,13 @@ jobs:
         run: |
           PROJECT_NAME=$(echo ${{ github.repository }} | cut -d/ -f2)
           echo "IMAGE=ghcr.io/${{ github.repository }}/$PROJECT_NAME:${{ steps.artifact-version.outputs.version }}" >> $GITHUB_ENV
-          echo "CLUSTER_NAME=${{ github.event.inputs.cluster }}" >> $GITHUB_ENV
           echo "CONFIG_FILE=${{ github.event.inputs.config-file-name }}" >> $GITHUB_ENV
       - name: Deploy til GCP
         uses: nais/deploy/actions/deploy@v1
         env:
           APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
           RESOURCE: nais.yaml
-          CLUSTER: ${{ env.CLUSTER_NAME }}
+          CLUSTER: dev-gcp
           VARS: nais/${{ env.CONFIG_FILE }}.json
           REF: ${{ steps.artifact-version.outputs.version }}
           PRINT_PAYLOAD: true
