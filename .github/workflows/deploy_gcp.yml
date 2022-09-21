@@ -10,6 +10,7 @@ on:
         options:
           - 'mock'
           - 'dev'
+          - 'dev-fss'
 
 jobs:
   deploy:
