@@ -21,8 +21,10 @@ spec:
         - application: "sosialhjelp-veiviser{{appNamePostfix}}"
         - application: "sosialhjelp-soknad{{appNamePostfix}}"
         - application: "sosialhjelp-soknad-api{{appNamePostfix}}"
+          cluster: {{cluster}}
         - application: "sosialhjelp-innsyn{{appNamePostfix}}"
         - application: "sosialhjelp-innsyn-api{{appNamePostfix}}"
+          cluster: {{cluster}}
         - application: "sosialhjelp-modia{{appNamePostfix}}"
         - application: "sosialhjelp-modia-api{{appNamePostfix}}"
         - application: "sosialhjelp-mock-alt{{appNamePostfix}}"
@@ -34,7 +36,9 @@ spec:
     inbound:
       rules:
         - application: "sosialhjelp-soknad-api{{appNamePostfix}}"
+          cluster: {{cluster}}
         - application: "sosialhjelp-innsyn-api{{appNamePostfix}}"
+          cluster: {{cluster}}
         - application: "sosialhjelp-modia-api{{appNamePostfix}}"
         - application: "sosialhjelp-dialog-api{{appNamePostfix}}"
   ingresses:

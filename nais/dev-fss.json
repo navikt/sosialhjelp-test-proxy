@@ -2,7 +2,8 @@
   "applicationName": "sosialhjelp-proxy-dev-fss",
   "namespace": "teamdigisos",
   "appNamePostfix": "",
+  "cluster": "dev-fss",
   "domene_pa_innsiden": ".dev-fss-pub.nais.io",
-  "domene_pa_utsiden": ".dev.nav.no",
+  "domene_pa_utsiden": "-test.dev.nav.no",
   "ingresses": ["https://digisos-test.dev.nav.no"]
 }

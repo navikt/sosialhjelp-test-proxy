@@ -2,6 +2,7 @@
   "applicationName": "sosialhjelp-proxy-dev",
   "namespace": "teamdigisos",
   "appNamePostfix": "-dev",
+  "cluster": "dev-gcp",
   "domene_pa_innsiden": "-dev.dev.nav.no",
   "domene_pa_utsiden": ".dev.nav.no",
   "ingresses": ["https://digisos.dev.nav.no"]
