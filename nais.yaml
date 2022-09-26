@@ -31,12 +31,15 @@ spec:
         - application: "sosialhjelp-dialog-veileder{{appNamePostfix}}"
         - application: "sosialhjelp-dialog-api{{appNamePostfix}}"
         - application: "sosialhjelp-fagsystem-mock{{appNamePostfix}}"
+        - application: "sosialhjelp-avtaler{{appNamePostfix}}"
+        - application: "sosialhjelp-avtaler-api{{appNamePostfix}}"
     inbound:
       rules:
         - application: "sosialhjelp-soknad-api{{appNamePostfix}}"
         - application: "sosialhjelp-innsyn-api{{appNamePostfix}}"
         - application: "sosialhjelp-modia-api{{appNamePostfix}}"
         - application: "sosialhjelp-dialog-api{{appNamePostfix}}"
+        - application: "sosialhjelp-avtaler-api{{appNamePostfix}}"
   ingresses:
 {{#each ingresses}}
     - "{{this}}"
