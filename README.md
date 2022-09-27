@@ -23,4 +23,4 @@ location /sosialhjelp/soknad/ {
 }
 ```
 
-Proxyen forutsetter at app-ingresser er postfixet med enten `-dev` eller `-mock`, eks `https://sosialhjelp-veiviser-mock.dev.nav.no/sosialhjelp`.
+Proxyen forutsetter at app-ingresser er postfixet med enten `-dev` eller `-mock`, eks `https://sosialhjelp-soknad-mock.dev.nav.no/sosialhjelp/soknad`.
