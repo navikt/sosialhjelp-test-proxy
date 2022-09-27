@@ -18,7 +18,6 @@ spec:
         - host: "appres.nav.no"
         - host: "nav.psplugin.com"
       rules:
-        - application: "sosialhjelp-veiviser{{appNamePostfix}}"
         - application: "sosialhjelp-soknad{{appNamePostfix}}"
         - application: "sosialhjelp-soknad-api{{appNamePostfix}}"
         - application: "sosialhjelp-innsyn{{appNamePostfix}}"
