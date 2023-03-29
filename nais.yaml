@@ -16,6 +16,17 @@ spec:
     outbound:
       external:
         - host: "dekoratoren.ekstern.dev.nav.no"
+        - host: "sosialhjelp-soknad-api-mock.dev.nav.no"
+        - host: "sosialhjelp-soknad-mock.dev.nav.no"
+        - host: "sosialhjelp-innsyn-api-mock.dev.nav.no"
+        - host: "sosialhjelp-innsyn-mock.dev.nav.no"
+        - host: "sosialhjelp-modia-api-mock.dev.nav.no"
+        - host: "sosialhjelp-modia-mock.dev.nav.no"
+        - host: "sosialhjelp-mock-alt-api-mock.dev.nav.no"
+        - host: "sosialhjelp-mock-alt-mock.dev.nav.no"
+        - host: "sosialhjelp-fagsystem-mock.dev.nav.no"
+        - host: "sosialhjelp-avtaler-api-mock.dev.nav.no"
+        - host: "sosialhjelp-avtaler-mock.dev.nav.no"
         - host: "appres.nav.no"
         - host: "nav.psplugin.com"
       rules:
