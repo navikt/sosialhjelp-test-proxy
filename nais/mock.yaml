@@ -1,0 +1,75 @@
+apiVersion: "nais.io/v1alpha1"
+kind: "Application"
+metadata:
+  name: sosialhjelp-proxy-mock
+  namespace: teamdigisos
+  labels:
+    team: teamdigisos
+  annotations:
+    nais.io/run-as-group: "0"
+    nais.io/read-only-file-system: "false"
+    nginx.ingress.kubernetes.io/proxy-body-size: "150M"
+spec:
+  image: {{image}}
+  port: 8080
+  accessPolicy:
+    outbound:
+      external:
+        - host: dekoratoren.ekstern.dev.nav.no
+        - host: sosialhjelp-soknad-mock.dev.nav.no
+        - host: sosialhjelp-soknad-api-mock.dev.nav.no
+        - host: sosialhjelp-innsyn-mock.dev.nav.no
+        - host: sosialhjelp-innsyn-api-mock.dev.nav.no
+        - host: sosialhjelp-modia-mock.dev.nav.no
+        - host: sosialhjelp-modia-api-mock.dev.nav.no
+        - host: sosialhjelp-mock-alt-mock.dev.nav.no
+        - host: sosialhjelp-mock-alt-api-mock.dev.nav.no
+        - host: sosialhjelp-fagsystem-mock.dev.nav.no
+        - host: sosialhjelp-avtaler-mock.dev.nav.no
+        - host: sosialhjelp-avtaler-api-mock.dev.nav.no
+      rules:
+        - application: sosialhjelp-soknad-mock
+        - application: sosialhjelp-soknad-api-mock
+        - application: sosialhjelp-innsyn-mock
+        - application: sosialhjelp-innsyn-api-mock
+        - application: sosialhjelp-modia-mock
+        - application: sosialhjelp-modia-api-mock
+        - application: sosialhjelp-mock-alt-mock
+        - application: sosialhjelp-mock-alt-api-mock
+        - application: sosialhjelp-fagsystem-mock-mock
+        - application: sosialhjelp-avtaler-mock
+        - application: sosialhjelp-avtaler-api-mock
+    inbound:
+      rules:
+        - application: sosialhjelp-soknad-api-mock
+        - application: sosialhjelp-innsyn-api-mock
+        - application: sosialhjelp-modia-api-mock
+        - application: sosialhjelp-avtaler-api-mock
+  ingresses:
+    - "https://digisos.ekstern.dev.nav.no"
+  prometheus:
+    enabled: false
+  liveness:
+    path: /internal/isAlive
+    initialDelay: 20
+  readiness:
+    path: /internal/isAlive
+    initialDelay: 20
+  resources:
+    limits:
+      cpu: 200m
+      memory: 256Mi
+    requests:
+      cpu: 1m
+      memory: 32Mi
+  replicas:
+    min: 1
+    max: 1
+    cpuThresholdPercentage: 50
+  env:
+    - name: PORT
+      value: "8080"
+    - name: DOMENE_PA_UTSIDEN
+      value: ".ekstern.dev.nav.no"
+    - name: DOMENE_PA_INNSIDEN
+      value: "-mock.dev.nav.no"
