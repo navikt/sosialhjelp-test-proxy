@@ -15,6 +15,7 @@ spec:
   accessPolicy:
     outbound:
       external:
+        - host: "dekoratoren.ekstern.dev.nav.no"
         - host: "appres.nav.no"
         - host: "nav.psplugin.com"
       rules:
