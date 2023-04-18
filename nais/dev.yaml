@@ -40,7 +40,7 @@ spec:
         - application: sosialhjelp-modia-api-dev
         - application: sosialhjelp-avtaler-api-dev
   ingresses:
-    - "https://digisos.dev.nav.no"
+    - "https://digisos.intern.dev.nav.no"
   prometheus:
     enabled: false
   liveness:
