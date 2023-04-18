@@ -72,4 +72,4 @@ spec:
     - name: DOMENE_PA_UTSIDEN
       value: ".ekstern.dev.nav.no"
     - name: DOMENE_PA_INNSIDEN
-      value: "-mock.dev.nav.no"
+      value: "-mock.ekstern.dev.nav.no"
