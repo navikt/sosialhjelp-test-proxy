@@ -22,7 +22,7 @@ spec:
         - host: sosialhjelp-innsyn-api-dev.dev.nav.no
         - host: sosialhjelp-modia-dev.dev.nav.no
         - host: sosialhjelp-modia-api-dev.dev.nav.no
-        - host: sosialhjelp-avtaler-dev.dev.dev.nav.no
+        - host: sosialhjelp-avtaler-dev.dev.nav.no
         - host: sosialhjelp-avtaler-api-dev.dev.nav.no
       rules:
         - application: sosialhjelp-soknad-dev
