@@ -16,17 +16,17 @@ spec:
     outbound:
       external:
         - host: dekoratoren.ekstern.dev.nav.no
-        - host: sosialhjelp-soknad-mock.dev.nav.no
-        - host: sosialhjelp-soknad-api-mock.dev.nav.no
-        - host: sosialhjelp-innsyn-mock.dev.nav.no
-        - host: sosialhjelp-innsyn-api-mock.dev.nav.no
-        - host: sosialhjelp-modia-mock.dev.nav.no
-        - host: sosialhjelp-modia-api-mock.dev.nav.no
-        - host: sosialhjelp-mock-alt-mock.dev.nav.no
-        - host: sosialhjelp-mock-alt-api-mock.dev.nav.no
-        - host: sosialhjelp-fagsystem-mock.dev.nav.no
-        - host: sosialhjelp-avtaler-mock.dev.nav.no
-        - host: sosialhjelp-avtaler-api-mock.dev.nav.no
+        - host: sosialhjelp-soknad-mock.ekstern.dev.nav.no
+        - host: sosialhjelp-soknad-api-mock.ekstern.dev.nav.no
+        - host: sosialhjelp-innsyn-mock.ekstern.dev.nav.no
+        - host: sosialhjelp-innsyn-api-mock.ekstern.dev.nav.no
+        - host: sosialhjelp-modia-mock.ekstern.dev.nav.no
+        - host: sosialhjelp-modia-api-mock.ekstern.dev.nav.no
+        - host: sosialhjelp-mock-alt-mock.ekstern.dev.nav.no
+        - host: sosialhjelp-mock-alt-api-mock.ekstern.dev.nav.no
+        - host: sosialhjelp-fagsystem-mock.ekstern.dev.nav.no
+        - host: sosialhjelp-avtaler-mock.ekstern.dev.nav.no
+        - host: sosialhjelp-avtaler-api-mock.ekstern.dev.nav.no
       rules:
         - application: sosialhjelp-soknad-mock
         - application: sosialhjelp-soknad-api-mock
