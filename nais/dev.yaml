@@ -24,14 +24,6 @@ spec:
         - host: sosialhjelp-modia-api-dev.intern.dev.nav.no
         - host: sosialhjelp-avtaler-dev.dev.intern.dev.nav.no
         - host: sosialhjelp-avtaler-api-dev.intern.dev.nav.no
-        - host: sosialhjelp-soknad-dev.ekstern.dev.nav.no
-        - host: sosialhjelp-soknad-api-dev.ekstern.dev.nav.no
-        - host: sosialhjelp-innsyn-dev.ekstern.dev.nav.no
-        - host: sosialhjelp-innsyn-api-dev.ekstern.dev.nav.no
-        - host: sosialhjelp-modia-dev.ekstern.dev.nav.no
-        - host: sosialhjelp-modia-api-dev.ekstern.dev.nav.no
-        - host: sosialhjelp-avtaler-dev.ekstern.dev.nav.no
-        - host: sosialhjelp-avtaler-api-dev.ekstern.dev.nav.no
       rules:
         - application: sosialhjelp-soknad-dev
         - application: sosialhjelp-soknad-api-dev
