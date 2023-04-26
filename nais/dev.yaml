@@ -66,4 +66,4 @@ spec:
     - name: DOMENE_PA_UTSIDEN
       value: ".intern.dev.nav.no"
     - name: DOMENE_PA_INNSIDEN
-      value: "-dev.intern.dev.nav.no"
+      value: "-dev.dev.nav.no"
