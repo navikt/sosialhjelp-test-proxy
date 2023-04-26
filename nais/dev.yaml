@@ -16,14 +16,22 @@ spec:
     outbound:
       external:
         - host: dekoratoren.dev.nav.no
-        - host: sosialhjelp-soknad-dev.dev.nav.no
-        - host: sosialhjelp-soknad-api-dev.dev.nav.no
-        - host: sosialhjelp-innsyn-dev.dev.nav.no
-        - host: sosialhjelp-innsyn-api-dev.dev.nav.no
-        - host: sosialhjelp-modia-dev.dev.nav.no
-        - host: sosialhjelp-modia-api-dev.dev.nav.no
-        - host: sosialhjelp-avtaler-dev.dev.nav.no
-        - host: sosialhjelp-avtaler-api-dev.dev.nav.no
+        - host: sosialhjelp-soknad-dev.intern.dev.nav.no
+        - host: sosialhjelp-soknad-api-dev.intern.dev.nav.no
+        - host: sosialhjelp-innsyn-dev.dev.intern.nav.no
+        - host: sosialhjelp-innsyn-api-dev.intern.dev.nav.no
+        - host: sosialhjelp-modia-dev.dev.intern.nav.no
+        - host: sosialhjelp-modia-api-dev.intern.dev.nav.no
+        - host: sosialhjelp-avtaler-dev.dev.intern.nav.no
+        - host: sosialhjelp-avtaler-api-dev.intern.dev.nav.no
+        - host: sosialhjelp-soknad-dev.ekstern.dev.nav.no
+        - host: sosialhjelp-soknad-api-dev.ekstern.dev.nav.no
+        - host: sosialhjelp-innsyn-dev.dev.ekstern.nav.no
+        - host: sosialhjelp-innsyn-api-dev.intern.dev.nav.no
+        - host: sosialhjelp-modia-dev.dev.ekstern.nav.no
+        - host: sosialhjelp-modia-api-dev.ekstern.dev.nav.no
+        - host: sosialhjelp-avtaler-dev.dev.ekstern.nav.no
+        - host: sosialhjelp-avtaler-api-dev.ekstern.dev.nav.no
       rules:
         - application: sosialhjelp-soknad-dev
         - application: sosialhjelp-soknad-api-dev
