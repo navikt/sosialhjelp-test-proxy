@@ -40,7 +40,7 @@ spec:
         - application: sosialhjelp-modia-api-dev
         - application: sosialhjelp-avtaler-api-dev
   ingresses:
-    - "https://digisos.dev.nav.no"
+    - "https://digisos.intern.dev.nav.no"
   prometheus:
     enabled: false
   liveness:
@@ -64,6 +64,6 @@ spec:
     - name: PORT
       value: "8080"
     - name: DOMENE_PA_UTSIDEN
-      value: ".dev.nav.no"
+      value: ".intern.dev.nav.no"
     - name: DOMENE_PA_INNSIDEN
       value: "-dev.dev.nav.no"
