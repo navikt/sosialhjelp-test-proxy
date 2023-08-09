@@ -19,7 +19,7 @@ jobs:
       - uses: actions/checkout@v3
       - name: Create artifact version
         id: artifact-version
-        uses: navikt/sosialhjelp-ci/actions/create-artifact-version@master
+        uses: navikt/sosialhjelp-ci/actions/create-artifact-version@v2
       - name: Sett env variabler
         run: |
           PROJECT_NAME=$(echo ${{ github.repository }} | cut -d/ -f2)
