@@ -1,4 +1,4 @@
-FROM nginxinc/nginx-unprivileged:1.21.3
+FROM nginxinc/nginx-unprivileged:1.25.3
 COPY default.conf /default.conf
 COPY static /static
 RUN chmod 660 /etc/nginx/conf.d/default.conf
